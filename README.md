@@ -10,8 +10,6 @@
 ```
 module.exports = {"bitly_token":"xxxxxxxxxxxxxxxxxxxxxxxxx"}  
 ```
-4. You are good to go
-
 
 ## Use
 
