@@ -11,7 +11,11 @@
   "main": "dist/index.js",
   "keywords": [
     "cerebro",
-    "cerebro-plugin"
+    "cerebro-plugin",
+    "shorten",
+    "short",
+    "url",
+    "bitly"
   ],
   "scripts": {
     "start": "cerebro-scripts start",
@@ -20,7 +24,8 @@
     "clear": "cerebro-scripts clear",
     "prepublish": "yarn clear && yarn build"
   },
-  "description": "cerebro plugins to shorten url",
+  "description": "cerebro plugins to shorten url with bitly",
   "author": "Olly.W",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "git@github.com:yonaichin/cerebro-shorten-url.git"
 }
