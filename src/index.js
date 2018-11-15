@@ -23,20 +23,22 @@ const onKeyDownHandler = query => actions => async event => {
       break
     case 13:
       event.preventDefault()
-      actions.replaceTerm('Shortening...')
-      try {
-        const url = await search(query)
-        actions.replaceTerm('Shortened and Copied!')
-        actions.copyToClipboard(url)
-        await wait(0.5)
-        actions.hideWindow()
+      if (query !== '') {
+        actions.replaceTerm('Shortening...')
+        try {
+          const url = await search(query)
+          actions.replaceTerm('Shortened and Copied!')
+          actions.copyToClipboard(url)
+          await wait(0.5)
+          actions.hideWindow()
 
-      } catch (e) {
-        actions.replaceTerm('Shorten url ran into unknown problems', e)
-        await wait(3)
-        actions.hideWindow()
+        } catch (e) {
+          actions.replaceTerm('Shorten url ran into unknown problems', e)
+          await wait(3)
+          actions.hideWindow()
+        }
+        break
       }
-      break
   }
 }
 
